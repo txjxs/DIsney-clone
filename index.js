@@ -68,9 +68,7 @@ const createSlide = () => {
 for (let i = 0; i < 3; i++) {
 	createSlide();
 }
-// setInterval(() => {
-// 	createSlide();
-// }, 3000);
+setInterval(() => {createSlide();}, 3000);
 
 
 
