@@ -85,3 +85,20 @@ videoCards.forEach(item => {
 		
 	})
 })
+
+
+let cardContainers = [...document.querySelectorAll('.card-container')];
+let preBtns = [...document.querySelectorAll('.pre-button')];
+let nxtBtns = [...document.querySelectorAll('.nxt-button')];
+
+cardContainers.forEach((item, i) => {
+	let containerDimension = item.getBoundingClientRect();
+	let containerWidth = containerDimension.width;
+
+	nxtBtns[i].addEventListener('click', () => {
+		item.scrollLeft += containerWidth - 200; 
+	})
+	preBtns[i].addEventListener('click', () => {
+		item.scrollLeft -= containerWidth + 200; 
+	})
+})
